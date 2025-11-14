@@ -15,13 +15,25 @@ for (const key in product1) {
     // Ensure the property belongs to the instance itself, not its prototype chain
     if (Object.prototype.hasOwnProperty.call(product1, key)) {
         const value = product1[key as keyof Product]; // Type assertion for safety
-        console.log(`${key}: ${value}`);
+        if (key === "price") {
+            console.log(`${key}: $ ${value}`)
+        } else if (key === "weight") {
+            console.log(`${key}: ${value} kg`)
+        } else if (key === "fileSize") {
+            console.log(`${key}: ${value} MB`)
+        } else { console.log(`${key}: ${value}`) }
     }
 }
 for (const key in product2) {
     // Ensure the property belongs to the instance itself, not its prototype chain
     if (Object.prototype.hasOwnProperty.call(product2, key)) {
         const value = product2[key as keyof Product]; // Type assertion for safety
-        console.log(`${key}: ${value}`);
+        if (key === "price") {
+            console.log(`${key}: $ ${value}`)
+        } else if (key === "weight") {
+            console.log(`${key}: ${value} kg`)
+        } else if (key === "fileSize") {
+            console.log(`${key}: ${value} MB`)
+        } else { console.log(`${key}: ${value}`) };
     }
 }
