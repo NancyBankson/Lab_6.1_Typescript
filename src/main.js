@@ -1,13 +1,8 @@
 import Product from "./models/Product.js";
 import { PhysicalProduct } from "./models/PhysicalProduct.js";
 import { DigitalProduct } from "./models/DigitalProduct.js";
-// function printProductValues(productValue: Product): void {
-//     console.log(`SKU: ${productValue.sku}, Name: ${productValue.name}, Price: $ ${productValue.price}, Weight: ${productValue.weight}, Size: ${productValue.fileSize}, Total Price: ${productValue.getPriceWithTax(productValue)}`);
-// }
 const product1 = new PhysicalProduct("BB1", "1 TB SSD", 65.99, 0.03);
 const product2 = new DigitalProduct("R2D", "Blog App", 3.99, 28);
-// printProductValues(product1);
-// printProductValues(product2);
 for (const key in product1) {
     // Ensure the property belongs to the instance itself, not its prototype chain
     if (Object.prototype.hasOwnProperty.call(product1, key)) {
