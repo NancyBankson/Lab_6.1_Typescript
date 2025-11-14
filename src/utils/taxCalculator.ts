@@ -1,6 +1,6 @@
 import Product from "../models/Product.js";
-import {PhysicalProduct} from "../models/PhysicalProduct.js";
-import {DigitalProduct} from "../models/DigitalProduct.js";
+// import {PhysicalProduct} from "../models/PhysicalProduct.js";
+// import {DigitalProduct} from "../models/DigitalProduct.js";
  
 
 
