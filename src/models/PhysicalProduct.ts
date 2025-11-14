@@ -10,7 +10,7 @@ constructor(sku: string, name:string, price:number, weight: number) {
 }
 
 getPriceWithTax() {
-        return calculateTax(this)
+        return Math.round(100*calculateTax(this, 0.1))/100;
     }
 
 get weightInKg(): string {

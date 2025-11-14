@@ -7,7 +7,7 @@ export class DigitalProduct extends Product {
         this.fileSize = fileSize;
     }
     getPriceWithTax() {
-        return calculateTax(this);
+        return Math.round(100 * calculateTax(this, 0)) / 100;
     }
     get fileSizeInMb() {
         return `${this.fileSize} MB`;

@@ -13,7 +13,7 @@ export default class Product {
         return `SKU: ${this.sku} Product Name: ${this.name} Price : $ ${this.price}`;
     }
     getPriceWithTax() {
-        return calculateTax(this);
+        return Math.round(100 * calculateTax(this, 0.1)) / 100;
     }
 }
 //# sourceMappingURL=Product.js.map

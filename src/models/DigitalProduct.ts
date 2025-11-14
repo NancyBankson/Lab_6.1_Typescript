@@ -10,7 +10,7 @@ constructor(sku: string, name:string, price:number, fileSize: number) {
 }
 
 getPriceWithTax() {
-        return calculateTax(this)
+        return Math.round(100*calculateTax(this, 0))/100;
     }
 
 get fileSizeInMb(): string {

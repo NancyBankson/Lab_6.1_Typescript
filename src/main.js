@@ -26,6 +26,7 @@ for (const key in product1) {
         }
     }
 }
+console.log(`Total price: $ ${product1.getPriceWithTax()}`);
 for (const key in product2) {
     // Ensure the property belongs to the instance itself, not its prototype chain
     if (Object.prototype.hasOwnProperty.call(product2, key)) {
@@ -45,4 +46,5 @@ for (const key in product2) {
         ;
     }
 }
+console.log(`Total price: $ ${product2.getPriceWithTax()}`);
 //# sourceMappingURL=main.js.map
